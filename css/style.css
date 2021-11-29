@@ -1,0 +1,81 @@
+body{
+    height: 100%;
+    margin: 0;
+}
+h1{
+    font-family: sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin-bottom: 0;
+    top: 70px;
+    position: relative;  
+}
+
+.container{
+    position: relative;
+    top: 15vh;
+}
+
+#table{
+    -webkit-box-shadow:inset 0px 0px 0px 23px rgb(255, 255, 255);
+    -moz-box-shadow:inset 0px 0px 0px 23px rgb(255, 255, 255);
+    box-shadow:inset 0px 0px 0px 23px rgb(255, 255, 255);
+    position: relative;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(25, 27, 27);
+    width: 486px;
+    height: 498px;
+}
+
+.row{
+    display: flex;
+    column-gap: 40px;
+    position: relative;
+}
+
+.select-box{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 120px;
+    height: 120px;
+}
+
+.symbol{
+    text-align: center;
+    font-size: 100px;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#displayboard{
+    height: 15vmin;
+    width: 67vmin;
+    top: 18vh;
+    background-color: #c8c8c8;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 1vmin;
+}
+
+#controls{
+    width: 67vmin;
+    top: 17vh;
+    position: relative;
+    margin: 0 auto;
+}
+
+#displayboard > ul > li{
+    list-style: none;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+input{
+    position: relative;
+}
+input[type=button]{
+    margin-top: 10px;
+}
