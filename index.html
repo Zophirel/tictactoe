@@ -1,47 +1,43 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Tic Tac Toe</title>
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     </head>
-
     <body>
-        <h1>TIC TAC TOE</h1>
-        <div class="container">
+        <div id="header">
+            <h1>TIC TAC TOE</h1>
+        </div>
+        
+        <div id="main">
             <div id="table">
-                <div class="row">
-                    <div class="select-box"></div>
-                    <div class="select-box"></div>
-                    <div class="select-box"></div>
-                </div>
+                <div class="select-box"></div>
+                <div class="select-box"></div>
+                <div class="select-box"></div>
                 
-                <div class="row">
-                    <div class="select-box"></div>
-                    <div class="select-box"></div>
-                    <div class="select-box"></div>
-                </div>
-
-                <div class="row">
-                    <div class="select-box"></div>
-                    <div class="select-box"></div>
-                    <div class="select-box"></div>
-                </div>
+                <div class="select-box"></div>
+                <div class="select-box"></div>
+                <div class="select-box"></div>
+                
+                <div class="select-box"></div>
+                <div class="select-box"></div>
+                <div class="select-box"></div>
             </div>
         </div>
         
-        <div id="controls">
-            <input type="text" placeholder="Player1">
-            <input type="text" placeholder="Player2">
-            <input type="button" class="btn" value="Reset">
-            <input type="button" class="btn" value="Start">
+        <div id="footer">
+            <div id="controls">
+                <input type="text" placeholder="player1">
+                <input type="text" placeholder="player2">
+                <input type="button" value="Start!">
+                <input type="button" value="Reset">
+            </div>
+            <div id="displayboard">
+                <ul>
+                </ul>
+            </div>
         </div>
-        <div id="displayboard">
-            <ul>
-            </ul>
-        </div>
-
-        <script src="js/script.js" type="module"></script>
+        <script src="js/script.js"></script>
     </body>
-
 </html>

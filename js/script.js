@@ -171,8 +171,7 @@ const gameBoard = (() => {
             curr_player = player1;
             players = [player1, player2];
             
-            displayBoard.addinfo("now playing "+`${players[0].name}`+" and "+`${players[1].name}`);
-            displayBoard.addinfo("now playing "+`${players[0].name}`+" and "+`${players[1].name}`);
+            //displayBoard.addinfo("now playing "+`${players[0].name}`+" and "+`${players[1].name}`);
             initTable();
         }
     } 
