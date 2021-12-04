@@ -1,45 +1,69 @@
+html{
+    margin: 0; 
+    height: 100%; 
+    overflow: hidden;
+    
+}
+
 body{
     margin: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
+    overflow: hidden;
 }
 
-h1{
-    font-family: sans-serif;
-    font-size: 3rem;
+#title{
+    font-weight: bold;
+    font-size: 4.5vmax;
     text-align: center;
     position: relative;
-    margin: 0;  
+    margin: 0; 
+    bottom: 15vmin;
+
+}
+
+#counter{
+    position: absolute;
+    opacity: 0;
+    font-size: 10vmax;
+    color: gainsboro;
+    top: 20vh;
+    
 }
 
 #header{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     flex-grow: 1;
     width: 100%;
-    height: 13.3vh;
+    height: 45vh;
 }
 
 #main{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     flex-grow: 1;
     width: 100%;
     height: 63.3vh;
 }
 
+
 #table{
     display: grid;     
-    min-height: 40vh;
+    height: 40vh;
     min-width: 40vh;
     background-color: black;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 15px;
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+    right: 90vmin;
 }
 
 .symbol{
@@ -84,13 +108,30 @@ h1{
     min-width: 43vh;
 }
 
-input[type=text]{  
-    width: 10vh;
-    height: 60%;
-    border-radius: 20px;
+#form{
+    position: relative;
+    left: 0;
+    padding-left: 0;
+    opacity: 1;
+    display: block;
+    bottom: 20vmin;
 }
 
-input[type=button]{
-    width: 5vh;
-    height: 70%;
+#players{
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.input-field.col label.left{
+    left: 0;
+}
+
+.input-field.playerfield{
+    top: 30px;
+    width: 24vmax;
+}
+
+.btn{
+    top:20px;
+    width: 100%;    
 }

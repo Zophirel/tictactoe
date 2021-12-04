@@ -13,7 +13,7 @@ const player = (name) => {
 
 let testbtn = document.getElementById("testbtn");
 
-const displayBoard = (() => {
+/*const displayBoard = (() => {
     let dp = document.getElementById('displayboard').children[0];
     console.log(dp);
 
@@ -44,7 +44,10 @@ const displayBoard = (() => {
     
     return publicFunctions;
 
-})()
+})()*/
+
+let player1;
+let player2;
 
 const gameBoard = (() => {    
     
@@ -52,6 +55,7 @@ const gameBoard = (() => {
     let curr_player;
     let first_play = true;
     let boxes = document.querySelectorAll('.select-box');
+    console.log(boxes);
     
     let turn = 0, r = 0, c = 0; 
     let table;
@@ -88,6 +92,7 @@ const gameBoard = (() => {
         first_play = false;
         boxes.forEach(item => {    
             item.addEventListener('click', function setSymbol(event) {
+                console.log("clicked");
                 if(table[item.r][item.c] == 0){
                     
                     let content = document.createElement('p');
@@ -170,8 +175,8 @@ const gameBoard = (() => {
         setPlayers: (player1, player2) => {
             curr_player = player1;
             players = [player1, player2];
-            
-            //displayBoard.addinfo("now playing "+`${players[0].name}`+" and "+`${players[1].name}`);
+            console.log(player1);
+            console.log(player2);
             initTable();
         }
     } 
@@ -179,6 +184,44 @@ const gameBoard = (() => {
     return publicFunctions;
 })()
 
-let player1 = player("jeff");
-let player2 = player("joe");
-gameBoard.setPlayers(player1, player2);
+const elementsAnimation = (() => {
+
+    let startBtn = document.getElementById("start");
+    let title = document.getElementById("title");
+    let form = document.getElementById("form");
+    let table = document.getElementById("table");
+    let counter = document.getElementById("counter");
+    let inputs = document.getElementsByClassName("validate");
+
+    startBtn.addEventListener('click', () =>{
+        if(inputs[0].value != "" && inputs[1].value != ""){
+            
+            player1 = player(inputs[0].value);
+            player2 = player(inputs[1].value);
+            gameBoard.setPlayers(player1, player2);
+            
+            title.style.transition = "bottom 0.5s ease-in-out 0.5s";
+            title.style.bottom = "24vh";
+            
+            form.style.transition = "left 0.5s ease-in-out 0.5s, opacity 0.5s ease-in-out 0.5s";
+            form.style.left = "80vmin";
+            form.style.opacity = "0";
+    
+
+            table.style.transition = "right 0.55s ease-in-out 0.55s, opacity 0.55s ease-in-out 0.55s";
+            table.style.right = "0";
+            table.style.opacity = "1";
+            table.style.zIndex = "1";
+
+            counter.style.transition = "opacity 0.55s ease-in-out 0.55s";
+            counter.style.opacity = "1";
+            
+            setTimeout(() => {
+                form.style.display = "none";
+                table.style.position = "relative";
+            }, 500);        
+        }else{
+            alert("please insert player names");
+        }
+    })
+})()

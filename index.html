@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html>
+<html style="line-height: 1;">
     <head>
         <title>Tic Tac Toe</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.0/css/materialize.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div id="header">
-            <h1>TIC TAC TOE</h1>
+            <h2 id="title">TIC TAC TOE</h2>
+            <h2 id="counter">0 - 0</h2>
         </div>
-        
         <div id="main">
             <div id="table">
                 <div class="select-box"></div>
@@ -24,20 +24,25 @@
                 <div class="select-box"></div>
                 <div class="select-box"></div>
             </div>
-        </div>
-        
-        <div id="footer">
-            <div id="controls">
-                <input type="text" placeholder="player1">
-                <input type="text" placeholder="player2">
-                <input type="button" value="Start!">
-                <input type="button" value="Reset">
-            </div>
-            <div id="displayboard">
-                <ul>
-                </ul>
-            </div>
+            <ul id="form">
+                <li id="players">        
+                    <div class="input-field playerfield player1">
+                        <input id="last_name" type="text" class="validate">
+                        <label class="left" for="last_name">Player 1</label>
+                    </div>
+                </li>
+                
+                <li id="players">
+                    <div class="input-field playerfield">
+                        <input id="last_name" type="text" class="validate">
+                        <label class = "left" for="last_name">Player 2</label>
+                    </div>
+                </li>
+                <button id="start" class="btn waves-effect waves-light" type="submit" name="action">Start!</button>
+            </ul>
+           
         </div>
         <script src="js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
 </html>
